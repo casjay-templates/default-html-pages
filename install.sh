@@ -40,11 +40,10 @@ __function_exists() { builtin type $1 >/dev/null 2>&1 || return 1; }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Define variables
-DEFAULT_COLOR="254"
 DEFAULT_HTML_FILES_EXIT_STATUS=0
-WEB_SERVER_HTML_DIR="/usr/share/httpd/html"
+WEB_SERVER_HTML_DIR="/usr/share/httpd/default"
 SOURCE_GIT_REPO="https://github.com/casjay-templates/default-html-pages"
-[ -n "$TMP" ] && [ -d "$TMP" ] && TMP_DIR="$TMP/default_html_files_$$" || TMP_DIR="/tmp/default_html_files_$$"
+TMP_DIR="/tmp/default_html_files_$$"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Main application
 echo "Installing to $WEB_SERVER_HTML_DIR"
@@ -52,7 +51,7 @@ echo "Installing to $WEB_SERVER_HTML_DIR"
 [ "$USER" = "root" ] && runas_user="" || runas_user="sudo"
 $runas_user mkdir -p "$WEB_SERVER_HTML_DIR"
 $runas_user git clone -q "$SOURCE_GIT_REPO" "$TMP_DIR"
-$runas_user cp -Rf "$TMP_DIR/." "$WEB_SERVER_HTML_DIR/"
+$runas_user cp -Rf "$TMP_DIR/html/." "$WEB_SERVER_HTML_DIR/"
 [ -d "$TMP_DIR" ] && rm -Rf "$TMP_DIR"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # End application
