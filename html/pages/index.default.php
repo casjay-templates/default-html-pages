@@ -33,17 +33,18 @@
   </script>
   <script src="//cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous" defer>
-  </script>
+    </script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
   <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer>
-  </script>
+    </script>
 
   <script src="/js/errorpages/isup.js" defer></script>
   <script src="/js/errorpages/homepage.js" defer></script>
   <script src="/js/errorpages/loaddomain.js" defer></script>
-  <script src="//cdn.passprotect.io/passprotect.min.js" defer></script>
+  <script src="//cdn.jsdelivr.net/npm/passprotect@1.0.0/umd/passprotect.min.js" crossorigin="anonymous" defer
+    async></script>
   <title>Site Configured</title>
 </head>
 
@@ -66,7 +67,7 @@
       Server Admin you can now upload your site to <br />
       <?php echo $_SERVER['DOCUMENT_ROOT']; ?>
       <br /><br /><br />
-      <?php echo "System Hostname: " , gethostname() . "<br />"; ?>
+      <?php echo "System Hostname: ", gethostname() . "<br />"; ?>
       <?php echo "Server Name: " . $_SERVER['SERVER_NAME'] . "<br />"; ?>
       <?php echo "IP Address: " . $_SERVER['SERVER_ADDR'] . "<br />"; ?> <br />
       Linux OsVer: <?php echo shell_exec('cat /etc/redhat-release'); ?> <br />
@@ -101,7 +102,8 @@
           <a href="//github.com/casjay" target="_blank" rel="noopener">Jason M. Hempstead (Casjay)</a>
           <br />
           This site is powered by an
-          <a href="//github.com/casjay-templates/default-web-assets" target="_blank" rel="noopener">open source </a>theme
+          <a href="//github.com/casjay-templates/default-web-assets" target="_blank" rel="noopener">open source
+          </a>theme
         </div>
         <br />
         <!-- end engine block --->
