@@ -41,7 +41,7 @@ __function_exists() { builtin type $1 >/dev/null 2>&1 || return 1; }
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Define variables
 DEFAULT_HTML_FILES_EXIT_STATUS=0
-WEB_SERVER_HTML_DIR="/usr/share/httpd/default"
+WEB_SERVER_HTML_DIR="/usr/local/share/httpd/default"
 SOURCE_GIT_REPO="https://github.com/casjay-templates/default-html-pages"
 TMP_DIR="/tmp/default_html_files_$$"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
