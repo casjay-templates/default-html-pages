@@ -49,7 +49,6 @@
   <script src="./js/errorpages/loaddomain.js"></script>
   <script src="./js/jquery/default.js"></script>
   <script src="./js/passprotect.min.js" defer></script>
-  <script src="./js/bootstrap.min.js" defer></script>
   <script src="./js/app.js" defer></script>
   <title>Welcome to REPLACE_SERVER_SOFTWARE server</title>
 </head>
